@@ -15,12 +15,8 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.required_ruby_version = '>= 2.4.0'
 
-  # FIXME - uncomment evt-entity_store and evt-event_store and remove rest
-  #s.add_runtime_dependency 'evt-entity_store'
-  #s.add_runtime_dependency 'evt-messaging-event_store'
-  s.add_runtime_dependency 'evt-message_store-event_store'
-  s.add_runtime_dependency 'evt-entity_cache'
-  # /FIXME
+  s.add_runtime_dependency 'evt-entity_store'
+  s.add_runtime_dependency 'evt-messaging-event_store'
 
   s.add_development_dependency 'test_bench'
 end
