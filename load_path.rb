@@ -8,8 +8,8 @@ rescue LoadError
   Bundler.require
 end
 
-lib_dir = File.join(__dir__, 'lib')
-$LOAD_PATH.unshift lib_dir unless $LOAD_PATH.include?(lib_dir)
+lib_dir = File.expand_path(File.join(__dir__, 'lib'))
+$LOAD_PATH.unshift(lib_dir) unless $LOAD_PATH.include?(lib_dir)
 
 libraries_dir = ENV['LIBRARIES_HOME']
 unless libraries_dir.nil?
